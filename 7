@@ -1,0 +1,41 @@
+public class Cat {
+    public String name;
+    private int age;
+    private int weight;
+
+    Cat() {
+    }
+    public static void main(String[] args) {
+
+        Cat catBarsik = new Cat();
+        Cat catMurzik = new Cat();
+        Cat catKotan = new Cat();
+
+        catBarsik.name = "Barsik";
+        catBarsik.age = 3;
+        catBarsik.weight = 4;
+
+        catMurzik.name = "Murzik";
+        catMurzik.age = 2;
+        catMurzik.weight = 7;
+
+        catKotan.name = "Kotan";
+        catKotan.age = 1;
+        catKotan.weight = 5;
+
+
+        if (catBarsik.fight(catKotan)) {
+            System.out.println("Победил " + catBarsik.name);
+        }
+        ;
+        if (catKotan.fight(catMurzik)) {
+            System.out.println("Победил " + catKotan.name);
+        }
+    }
+    private boolean fight(Cat anotherCat) {
+        if (anotherCat.weight <= 5) {
+            return true;
+        }
+        return false;
+    }
+}
